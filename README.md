@@ -29,7 +29,7 @@ Finally, run the project:
 Open the URL http://127.0.0.1:1000/ with your browser, upload test.csv file and then you will see list of genre and titles returned from sqlite3.
 
 
-Docker commands
+# Docker commands
 Note: Docker tag or id should be always specified in the end of the docker command to avoid issues
 
 Build docker image from Dockerfile
