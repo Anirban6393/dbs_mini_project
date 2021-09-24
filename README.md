@@ -16,15 +16,12 @@ Create and activate a Python virtual environment, then install the required Pyth
 PS > virtualenv venv
 PS > venv\scripts\activate.ps1
 (venv) PS > pip install -r requirements.txt
-Once dependencies are installed, set up the project for development
-
-
-(venv) PS > python setup.py develop
+Once dependencies are installed, set up the requirements.txt to download required packages.
 Finally, run the project:
 
-
+```
 (venv) PS > python app.py
-
+```
 
 Open the URL http://127.0.0.1:1000/ with your browser, upload test.csv file and then you will see list of genre and titles returned from sqlite3.
 
