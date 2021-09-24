@@ -29,23 +29,23 @@ Open the URL http://127.0.0.1:1000/ with your browser, upload test.csv file and 
 Note: Docker tag or id should be always specified in the end of the docker command to avoid issues
 
 Build docker image from Dockerfile
-
+```
 docker build -t "<app name>" -f docker-files/Dockerfile . eg: docker build -t "app" -f docker-files/Dockerfile .
-
+```
 Run the docker container after build
-
+```
 docker run -p 1000:1000 app # -p to make the port externally avaiable for browsers
-
+```
 Show all running containers
-
+```
 docker ps
-
+```
 a. Kill and remove running container
-
+```
 docker rm <containerid> -f
-
+```
 Open bash in a running docker container (optional)
-
+```
 docker exec -ti <containerid> bash
-
+```
 Docker Entry point The ENTRYPOINT specifies a command that will always be executed when the container starts. The CMD specifies arguments that will be fed to the ENTRYPOINT 1000
