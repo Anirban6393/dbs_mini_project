@@ -6,19 +6,18 @@ A RESTful API to return predictions from a trained ML model, built with Python 3
 Development set-up instructions
 First, open a command line interface and clone the GitHub repo in your workspace
 
-
-PS > cd $WORKSPACE_PATH$
+```
 PS > git clone https://github.com/Anirban6393/dbs_mini_project.git
 PS > cd dbs_mini_project
-Create and activate a Python virtual environment, then install the required Python packages using pip
+```
 
-
-PS > virtualenv venv
-PS > venv\scripts\activate.ps1
-(venv) PS > pip install -r requirements.txt
 Once dependencies are installed, set up the requirements.txt to download required packages.
-Finally, run the project:
+```
+(venv) PS > pip install -r requirements.txt
+```
 
+
+Finally, run the project:
 ```
 (venv) PS > python app.py
 ```
