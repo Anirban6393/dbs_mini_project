@@ -7,19 +7,16 @@ Development set-up instructions
 First, open a command line interface and clone the GitHub repo in your workspace
 
 
-
 PS > cd $WORKSPACE_PATH$
 PS > git clone https://github.com/Anirban6393/dbs_mini_project.git
 PS > cd dbs_mini_project
 Create and activate a Python virtual environment, then install the required Python packages using pip
 
 
-
 PS > virtualenv venv
 PS > venv\scripts\activate.ps1
 (venv) PS > pip install -r requirements.txt
 Once dependencies are installed, set up the project for development
-
 
 
 (venv) PS > python setup.py develop
@@ -32,16 +29,27 @@ Finally, run the project:
 Open the URL http://127.0.0.1:1000/ with your browser, upload test.csv file and then you will see list of genre and titles returned from sqlite3.
 
 
+Docker commands
+Note: Docker tag or id should be always specified in the end of the docker command to avoid issues
 
-Setting up the model
-The trained ML model is meant to be initialised and invoked to make predictions in the context of a Python unit saved inside the directory ml_rest_api/ml_trained_model. The structure of this Python module is explained in this document
+Build docker image from Dockerfile
 
+docker build -t "<app name>" -f docker-files/Dockerfile . eg: docker build -t "app" -f docker-files/Dockerfile .
 
+Run the docker container after build
 
-Build automation
-This project is built into a Docker image using the Docker Hub automated build at https://hub.docker.com/r/jgbustos/ml-rest-api/
+docker run -p 1000:1000 app # -p to make the port externally avaiable for browsers
 
+Show all running containers
 
-Running the Docker container
-> docker run -d -p1000:1000 jgbustos/ml-rest-api:latest
-Open the URL http://localhost:1000/api/ with your browser.
+docker ps
+
+a. Kill and remove running container
+
+docker rm <containerid> -f
+
+Open bash in a running docker container (optional)
+
+docker exec -ti <containerid> bash
+
+Docker Entry point The ENTRYPOINT specifies a command that will always be executed when the container starts. The CMD specifies arguments that will be fed to the ENTRYPOINT 1000
