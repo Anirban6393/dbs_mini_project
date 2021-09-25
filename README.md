@@ -1,6 +1,7 @@
-# dbs_mini_project
+## dbs_mini_project
 
 
+# Rest API
 A RESTful API to return predictions from a trained ML model, built with Python 3 and Flask-RESTX
 
 Development set-up instructions
