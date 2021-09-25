@@ -1,7 +1,7 @@
-## dbs_mini_project
+# DBS_MINI_PROJECT
 
 
-# Rest API
+## Rest API
 A RESTful API to return predictions from a trained ML model, built with Python 3 and Flask-RESTX
 
 Development set-up instructions
@@ -26,7 +26,7 @@ Finally, run the project:
 Open the URL http://127.0.0.1:1000/ with your browser, upload test.csv file and then you will see list of genre and titles returned from sqlite3.
 
 
-# Docker commands
+## Docker commands
 Note: Docker tag or id should be always specified in the end of the docker command to avoid issues
 
 Build docker image from Dockerfile
